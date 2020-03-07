@@ -1,0 +1,795 @@
+# project ns (3.24.1) configured on Thu Mar  5 22:57:35 2020 by
+# waf 1.8.12 (abi 98, python 20706f0 on linux2)
+# using ./waf configure --enable-examples
+#
+----------------------------------------
+Setting top to
+/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master
+----------------------------------------
+Setting out to
+/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build
+----------------------------------------
+Checking for 'gcc' (C compiler)
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CC' -> ['/usr/bin/gcc']
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='AR' -> ['/usr/bin/ar']
+/usr/bin/gcc
+----------------------------------------
+Checking for cc version
+4.8.4
+----------------------------------------
+Checking for 'g++' (C++ compiler)
+find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CXX' -> ['/usr/bin/g++']
+(tool ar is already loaded, skipping)
+/usr/bin/g++
+------------------------------------------------------
+Checking for compilation flag -Wl,--soname=foo support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_f32392f5826bdd261f391163705c7e85/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_f32392f5826bdd261f391163705c7e85/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------
+Checking for program 'python'
+/usr/bin/python
+find program=['python'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PYTHON' -> ['/usr/bin/python']
+['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
+err: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'get_tag'
+
+['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+7
+6
+final
+0
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/dist-packages'
+
+'/usr/local/lib/python2.7/dist-packages'
+
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
+out: '/usr/local/lib/python2.7/dist-packages'
+
+'/usr/local/lib/python2.7/dist-packages'
+
+------------------------------------------------------
+Checking for python version
+(2, 7, 6, 'final', 0)
+['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
+out: '/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  '
+''
+
+'/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  '
+''
+
+Configuration returned from ['/usr/bin/python']:
+prefix = '/usr'
+SO = '.so'
+LDFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro'
+LIBDIR = '/usr/lib'
+LIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'
+INCLUDEPY = '/usr/include/python2.7'
+Py_ENABLE_SHARED = 1
+MACOSX_DEPLOYMENT_TARGET = ''
+LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  '
+CFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  '
+LDVERSION = ''
+
+------------------------------------------------------
+python-config
+/usr/bin/python-config
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
+------------------------------------------------------------------
+Asking python-config for pyembed '--cflags --libs --ldflags' flags
+['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+-lpthread -ldl  -lutil -lm  -lpython2.7
+-L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpthread -ldl  -lutil -lm  -lpython2.7 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+
+yes
+------------------------------------------------------------------
+Getting pyembed flags from python-config
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e5aac1746cbde3e118e97d70ea4bae4d/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-fno-strict-aliasing', '-fstack-protector', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_e5aac1746cbde3e118e97d70ea4bae4d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e5aac1746cbde3e118e97d70ea4bae4d/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_e5aac1746cbde3e118e97d70ea4bae4d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython2.7']
+yes
+------------------------------------------------------------------
+Asking python-config for pyext '--cflags --libs --ldflags' flags
+['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+-lpthread -ldl  -lutil -lm  -lpython2.7
+-L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpthread -ldl  -lutil -lm  -lpython2.7 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+
+yes
+------------------------------------------------------------------
+Getting pyext flags from python-config
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_0a60745c22e72d447b115ed8c5a91123/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-fPIC', '-fno-strict-aliasing', '-fstack-protector', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0a60745c22e72d447b115ed8c5a91123/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0a60745c22e72d447b115ed8c5a91123/testbuild/testprog.so[0m
+
+['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0a60745c22e72d447b115ed8c5a91123/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython2.7']
+yes
+------------------------------------------------------------------
+Checking for compilation flag -fvisibility=hidden support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_f32392f5826bdd261f391163705c7e85/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_f32392f5826bdd261f391163705c7e85/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -Wno-array-bounds support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_f32392f5826bdd261f391163705c7e85/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_f32392f5826bdd261f391163705c7e85/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for pybindgen location
+not found
+------------------------------------------------------------------
+Checking for python module 'pybindgen'
+['/usr/bin/python', '-c', "\nimport pybindgen as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+err: Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+ImportError: No module named pybindgen
+
+not found
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/bindings/python: Could not find the python module 'pybindgen'
+------------------------------------------------------------------
+Checking boost includes
+1_54
+------------------------------------------------------------------
+Checking boost libs
+Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_signals.a
+    /usr/lib/x86_64-linux-gnu/libboost_signals.so
+    /usr/lib/x86_64-linux-gnu/libboost_signals.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_system.a
+    /usr/lib/x86_64-linux-gnu/libboost_system.so
+    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.54.0
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.54.0
+Trying pattern boost_system(-gcc[0-9]{0,3})-1_54.so$
+Trying pattern boost_system-1_54.so$
+Trying pattern boost_system(-gcc[0-9]{0,3}).so$
+Trying pattern boost_system.so$
+Found boost lib libboost_system.so
+Trying pattern boost_signals(-gcc[0-9]{0,3})-1_54.so$
+Trying pattern boost_signals-1_54.so$
+Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
+Trying pattern boost_signals.so$
+Found boost lib libboost_signals.so
+Trying pattern boost_filesystem(-gcc[0-9]{0,3})-1_54.so$
+Trying pattern boost_filesystem-1_54.so$
+Trying pattern boost_filesystem(-gcc[0-9]{0,3}).so$
+Trying pattern boost_filesystem.so$
+Found boost lib libboost_filesystem.so
+ok
+------------------------------------------------------------------
+Checking for boost linkage
+==>
+
+#include <boost/system/error_code.hpp>
+int main() { boost::system::error_code c; }
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e5783c9dc6b3ca95c68711fb710dfffa/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-I/usr/include', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_e5783c9dc6b3ca95c68711fb710dfffa/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e5783c9dc6b3ca95c68711fb710dfffa/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_e5783c9dc6b3ca95c68711fb710dfffa/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
+ok
+------------------------------------------------------------------
+Checking for click location
+not found
+------------------------------------------------------------------
+Checking for program 'pkg-config'
+/usr/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+------------------------------------------------------------------
+Checking for 'gtk+-2.0' >= 2.12
+['/usr/bin/pkg-config', '--atleast-version=2.12', 'gtk+-2.0']
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-2.0']
+err: Package 'Xrandr' requires 'randrproto >= 1.5' but version of RandrProto is 1.4.0
+
+not found
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/config-store: The configuration failed
+------------------------------------------------------------------
+Checking for 'libxml-2.0' >= 2.7
+['/usr/bin/pkg-config', '--atleast-version=2.7', 'libxml-2.0']
+['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0']
+out: -I/usr/include/libxml2  -lxml2  
+
+yes
+------------------------------------------------------------------
+Checking for type uint128_t
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	if ((uint128_t *) 0) return 0;
+	if (sizeof (uint128_t)) return 0;
+	return 1;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_d0030467058cb8423656ef3798d677c1/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_d0030467058cb8423656ef3798d677c1/testbuild/test.cpp.1.o']
+err: ../test.cpp: In function ‘int main(int, char**)’:
+../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
+  if ((uint128_t *) 0) return 0;
+       ^
+../test.cpp:5:18: error: expected primary-expression before ‘)’ token
+  if ((uint128_t *) 0) return 0;
+                  ^
+../test.cpp:5:20: error: expected ‘)’ before numeric constant
+  if ((uint128_t *) 0) return 0;
+                    ^
+../test.cpp:6:14: error: ‘uint128_t’ was not declared in this scope
+  if (sizeof (uint128_t)) return 0;
+              ^
+
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140165561347856: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_d0030467058cb8423656ef3798d677c1/testbuild/test.cpp.1.o']
+
+not found
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/core: The configuration failed
+------------------------------------------------------------------
+Checking for type __uint128_t
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	if ((__uint128_t *) 0) return 0;
+	if (sizeof (__uint128_t)) return 0;
+	return 1;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_0641963b7d418b8ac4486bc895e6859a/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0641963b7d418b8ac4486bc895e6859a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0641963b7d418b8ac4486bc895e6859a/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0641963b7d418b8ac4486bc895e6859a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking high precision implementation
+128-bit integer (default)
+------------------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_46bb8687b6e290a1a6f473a46462576a/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_46bb8687b6e290a1a6f473a46462576a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_46bb8687b6e290a1a6f473a46462576a/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_46bb8687b6e290a1a6f473a46462576a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_c2cd1386fd442354fd262fe4e1c0d7bf/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_c2cd1386fd442354fd262fe4e1c0d7bf/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: Arquivo ou diretório não encontrado
+ #include <sys/inttypes.h>
+                          ^
+compilation terminated.
+
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140165561386384: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_c2cd1386fd442354fd262fe4e1c0d7bf/testbuild/test.cpp.1.o']
+
+not found
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/core: The configuration failed
+------------------------------------------------------------------
+Checking for header sys/types.h
+==>
+#include <sys/types.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_367d54d9293684871f8c910ebdd5dc01/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_367d54d9293684871f8c910ebdd5dc01/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_367d54d9293684871f8c910ebdd5dc01/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_367d54d9293684871f8c910ebdd5dc01/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header sys/stat.h
+==>
+#include <sys/stat.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_7e3bbfb0b28f432ed4c7f4ad2fb2ae38/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_7e3bbfb0b28f432ed4c7f4ad2fb2ae38/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_7e3bbfb0b28f432ed4c7f4ad2fb2ae38/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_7e3bbfb0b28f432ed4c7f4ad2fb2ae38/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header dirent.h
+==>
+#include <dirent.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_6c5a6c19a54df51215ca1ee6aaeb0f4f/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_6c5a6c19a54df51215ca1ee6aaeb0f4f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6c5a6c19a54df51215ca1ee6aaeb0f4f/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_6c5a6c19a54df51215ca1ee6aaeb0f4f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header stdlib.h
+==>
+#include <stdlib.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_c87325ca257f25341cebce97d676b691/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_c87325ca257f25341cebce97d676b691/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c87325ca257f25341cebce97d676b691/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_c87325ca257f25341cebce97d676b691/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header signal.h
+==>
+#include <signal.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_0b7b5c90b8441853e6d1773ba7358bb1/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0b7b5c90b8441853e6d1773ba7358bb1/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0b7b5c90b8441853e6d1773ba7358bb1/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0b7b5c90b8441853e6d1773ba7358bb1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header pthread.h
+==>
+
+#include <pthread.h>
+int main ()
+{
+   pthread_mutex_t m;
+   pthread_mutex_init (&m, NULL);
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_ea8f56b69a9ba8f6f4c0c129fe1930cd/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_ea8f56b69a9ba8f6f4c0c129fe1930cd/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ea8f56b69a9ba8f6f4c0c129fe1930cd/testbuild/testprog[0m
+
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_ea8f56b69a9ba8f6f4c0c129fe1930cd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header stdint.h
+==>
+#include <stdint.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_46bb8687b6e290a1a6f473a46462576a/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_46bb8687b6e290a1a6f473a46462576a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_46bb8687b6e290a1a6f473a46462576a/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_46bb8687b6e290a1a6f473a46462576a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header inttypes.h
+==>
+#include <inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_8a1017ea1d9d0076d76ec1c742fc2c6a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header sys/inttypes.h
+==>
+#include <sys/inttypes.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_c2cd1386fd442354fd262fe4e1c0d7bf/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_c2cd1386fd442354fd262fe4e1c0d7bf/testbuild/test.cpp.1.o']
+err: ../test.cpp:1:26: fatal error: sys/inttypes.h: Arquivo ou diretório não encontrado
+ #include <sys/inttypes.h>
+                          ^
+compilation terminated.
+
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Configure.py", line 339, in run_build
+    bld.compile()
+  File "/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/.waf-1.8.12-f00e5b53f6bbeab1384a38c9cc5d51f7/waflib/Build.py", line 182, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed (exit status 1): 
+	{task 140165561388624: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_c2cd1386fd442354fd262fe4e1c0d7bf/testbuild/test.cpp.1.o']
+
+not found
+from /home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/src/core: The configuration failed
+------------------------------------------------------------------
+Checking for library rt
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_8ae528a4f68bb2270e157413244bcc78/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_8ae528a4f68bb2270e157413244bcc78/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8ae528a4f68bb2270e157413244bcc78/testbuild/testprog[0m
+
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_8ae528a4f68bb2270e157413244bcc78/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+yes
+------------------------------------------------------------------
+Checking for header sys/ioctl.h
+==>
+#include <sys/ioctl.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_ef6c83ab699bcd15e2749d0fccf0df7d/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_ef6c83ab699bcd15e2749d0fccf0df7d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ef6c83ab699bcd15e2749d0fccf0df7d/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_ef6c83ab699bcd15e2749d0fccf0df7d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header net/if.h
+==>
+#include <net/if.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_e23bd3a51cc4038a2d3e0ff86c1a93f5/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_e23bd3a51cc4038a2d3e0ff86c1a93f5/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e23bd3a51cc4038a2d3e0ff86c1a93f5/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_e23bd3a51cc4038a2d3e0ff86c1a93f5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header net/ethernet.h
+==>
+#include <net/ethernet.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_3179648a8023c82b946b23f26f5cbfec/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_3179648a8023c82b946b23f26f5cbfec/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3179648a8023c82b946b23f26f5cbfec/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_3179648a8023c82b946b23f26f5cbfec/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_43262234a44895aadfdf7c567934c20d/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_43262234a44895aadfdf7c567934c20d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_43262234a44895aadfdf7c567934c20d/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_43262234a44895aadfdf7c567934c20d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for header netpacket/packet.h
+==>
+#include <netpacket/packet.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_eb306313beb9a7e4a9d25fdb6244ddd0/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_eb306313beb9a7e4a9d25fdb6244ddd0/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_eb306313beb9a7e4a9d25fdb6244ddd0/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_eb306313beb9a7e4a9d25fdb6244ddd0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for NSC location
+not found
+------------------------------------------------------------------
+Checking for OpenFlow location
+not found
+------------------------------------------------------------------
+Checking for 'sqlite3'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'sqlite3']
+out:  -lsqlite3  
+
+yes
+------------------------------------------------------------------
+Checking for header linux/if_tun.h
+==>
+#include <linux/if_tun.h>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_43262234a44895aadfdf7c567934c20d/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_43262234a44895aadfdf7c567934c20d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_43262234a44895aadfdf7c567934c20d/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_43262234a44895aadfdf7c567934c20d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+yes
+------------------------------------------------------------------
+Checking for program 'sudo'
+/usr/bin/sudo
+find program=['sudo'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='SUDO' -> ['/usr/bin/sudo']
+------------------------------------------------------------------
+Checking for program 'valgrind'
+/usr/bin/valgrind
+find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='VALGRIND' -> ['/usr/bin/valgrind']
+------------------------------------------------------------------
+Checking for 'gsl'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
+out:  -lgsl -lgslcblas -lm  
+
+yes
+------------------------------------------------------------------
+Checking for compilation flag -Wno-error=deprecated-d... support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_f32392f5826bdd261f391163705c7e85/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_f32392f5826bdd261f391163705c7e85/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -Wno-error=deprecated-d... support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_0ffd1836dd6767d7e08eeeed85425bfb/test.c[0m
+
+['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0ffd1836dd6767d7e08eeeed85425bfb/testbuild/test.c.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_f32392f5826bdd261f391163705c7e85/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_f32392f5826bdd261f391163705c7e85/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -fstrict-aliasing support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_0ffd1836dd6767d7e08eeeed85425bfb/test.c[0m
+
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0ffd1836dd6767d7e08eeeed85425bfb/testbuild/test.c.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -Wstrict-aliasing support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_f32392f5826bdd261f391163705c7e85/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_f32392f5826bdd261f391163705c7e85/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -Wstrict-aliasing support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_0ffd1836dd6767d7e08eeeed85425bfb/test.c[0m
+
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/thayane/workspace/ns3-code-published-github/ns3-mmwave-master/build/.conf_check_0ffd1836dd6767d7e08eeeed85425bfb/testbuild/test.c.1.o']
+ok
+------------------------------------------------------------------
+Checking for program 'doxygen'
+/usr/bin/doxygen
+find program=['doxygen'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='DOXYGEN' -> ['/usr/bin/doxygen']
