@@ -374,7 +374,7 @@ remHelper->Install ();*/
 	}
 	
 	
-   p2ph.EnablePcapAll("cenario15");
+   p2ph.EnablePcapAll("PHYtracing");
 	// FlowMonitor
 	
   // Activate a data radio bearer
